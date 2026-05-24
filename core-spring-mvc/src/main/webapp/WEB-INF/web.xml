@@ -5,10 +5,7 @@
 <web-app>
   <display-name>core-spring-mvc</display-name>
 
-  <context-param>
-    <param-name>contextConfigLocation</param-name>
-    <param-value>com.example.core.config.WebAppConfig,com.example.core.config.MvcConfig</param-value>
-  </context-param>
+
 
   <filter>
     <filter-name>basicAuthFilter</filter-name>
@@ -26,6 +23,8 @@
       <param-name>contextConfigLocation</param-name>
       <param-value>com.example.core.config.WebAppConfig,com.example.core.config.MvcConfig</param-value>
     </init-param>
+
+
     <load-on-startup>1</load-on-startup>
   </servlet>
 
@@ -34,4 +33,5 @@
     <url-pattern>/</url-pattern>
   </servlet-mapping>
 </web-app>
+
 
