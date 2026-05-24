@@ -5,8 +5,11 @@
     <meta charset="UTF-8"/>
     <title>Admin Login</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 40px; }
-        .box { max-width: 420px; padding: 18px; border: 1px solid #ddd; border-radius: 8px; }
+body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        .wrap { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 24px; }
+        .box { width: 100%; max-width: 420px; padding: 18px; border: 1px solid #ddd; border-radius: 8px; }
+
+
         .row { margin: 10px 0; }
         label { display: block; font-size: 14px; margin-bottom: 6px; }
         input { width: 100%; padding: 10px; box-sizing: border-box; }

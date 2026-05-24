@@ -7,8 +7,10 @@
     <style>
         body { font-family: Arial, sans-serif; margin: 20px; }
         .top { display:flex; align-items:center; justify-content:space-between; margin-bottom: 16px; }
-        .pager button { margin-right: 8px; padding: 8px 12px; }
+        .pager { position: fixed; left: 50%; transform: translateX(-50%); bottom: 18px; display: flex; align-items: center; gap: 12px; padding: 10px 12px; background: rgba(255,255,255,0.95); border: 1px solid #eee; border-radius: 10px; }
+        .pager button { margin: 0; padding: 8px 12px; }
         .item { margin: 12px 0; border: 1px solid #eee; border-radius: 8px; padding: 10px; }
+
         pre { white-space: pre-wrap; word-wrap: break-word; }
     </style>
 </head>
