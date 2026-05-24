@@ -45,5 +45,15 @@ public class AdminController {
     public String dashboardPage() {
         return "dashboard";
     }
+
+    @PostMapping("/logout")
+    public String logout(HttpServletRequest request) {
+        HttpSession session = request.getSession(false);
+        if (session != null) {
+            session.removeAttribute(AdminSessionInterceptor.SESSION_ADMIN);
+            session.invalidate();
+        }
+        return "redirect:/login";
+    }
 }
 

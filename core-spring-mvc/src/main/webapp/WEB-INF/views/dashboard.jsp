@@ -15,8 +15,11 @@
 <body>
 <div class="top">
     <h2>JSON Payload Dashboard</h2>
-    <a href="<%= request.getContextPath() %>/login">Login</a>
+    <form method="post" action="<%= request.getContextPath() %>/logout" style="margin: 0;">
+        <button type="submit" style="padding: 8px 12px;">Logout</button>
+    </form>
 </div>
+
 
 <div class="pager">
     <button onclick="prevPage()">< Prev</button>
