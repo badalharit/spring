@@ -3,5 +3,35 @@
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
-  <display-name>Archetype Created Web Application</display-name>
+  <display-name>core-spring-mvc</display-name>
+
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>com.example.core.config.WebAppConfig,com.example.core.config.MvcConfig</param-value>
+  </context-param>
+
+  <filter>
+    <filter-name>basicAuthFilter</filter-name>
+    <filter-class>com.example.core.security.BasicAuthFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>basicAuthFilter</filter-name>
+    <url-pattern>/statement</url-pattern>
+  </filter-mapping>
+
+  <servlet>
+    <servlet-name>dispatcher</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <init-param>
+      <param-name>contextConfigLocation</param-name>
+      <param-value>com.example.core.config.WebAppConfig,com.example.core.config.MvcConfig</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>dispatcher</servlet-name>
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>
 </web-app>
+
