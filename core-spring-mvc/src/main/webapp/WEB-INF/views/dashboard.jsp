@@ -48,6 +48,8 @@
 
         const page = data.page ?? 0;
         const totalPages = data.totalPages ?? 0;
+        window.__totalPages = totalPages;
+
 
         document.getElementById('pageInfo').textContent = `Page ${page + 1} of ${totalPages}`;
 
@@ -75,7 +77,16 @@
         const res = await fetch(`${window.location.origin}${window.location.pathname}../../api/statements?page=${page}&size=${pageSize}`, { credentials: 'include' });
         const data = await res.json();
         render(data);
+
+        // Enable/disable pager buttons based on returned page info
+        const totalPages = window.__totalPages ?? 0;
+        document.querySelector('.pager button[onclick="prevPage()" ]');
+        const prevBtn = document.querySelector('.pager button[onclick="prevPage()"]');
+        const nextBtn = document.querySelector('.pager button[onclick="nextPage()"]');
+        if (prevBtn) prevBtn.disabled = (data.page ?? 0) <= 0;
+        if (nextBtn) nextBtn.disabled = (data.page ?? 0) >= (totalPages - 1);
     }
+
 
     function prevPage() {
         if (currentPage <= 0) return;
@@ -83,9 +94,11 @@
     }
 
     function nextPage() {
-        // naive next
+        const totalPages = Number((document.getElementById('pageInfo').textContent.match(/of\s+(\d+)/) || [0, 0])[1]);
+        if (currentPage >= totalPages - 1) return;
         loadPage(currentPage + 1);
     }
+
 
     // initial
     loadPage(0);
