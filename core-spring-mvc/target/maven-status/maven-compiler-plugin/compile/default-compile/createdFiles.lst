@@ -1,0 +1,9 @@
+com\example\core\config\WebAppConfig.class
+com\example\core\config\MvcConfig.class
+com\example\core\repository\MongoStatementRepository.class
+com\example\core\security\BasicAuthFilter.class
+com\example\core\service\StatementService.class
+com\example\core\controller\StatementController.class
+com\example\core\model\StatementResponse.class
+com\example\core\rabbit\RabbitStatementPublisher.class
+com\example\core\model\StatementRequest.class

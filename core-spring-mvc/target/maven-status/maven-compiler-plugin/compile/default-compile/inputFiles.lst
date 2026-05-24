@@ -1,0 +1,9 @@
+C:\wamp64\www\spring\core-spring-mvc\src\main\java\com\example\core\config\MvcConfig.java
+C:\wamp64\www\spring\core-spring-mvc\src\main\java\com\example\core\config\WebAppConfig.java
+C:\wamp64\www\spring\core-spring-mvc\src\main\java\com\example\core\controller\StatementController.java
+C:\wamp64\www\spring\core-spring-mvc\src\main\java\com\example\core\model\StatementRequest.java
+C:\wamp64\www\spring\core-spring-mvc\src\main\java\com\example\core\model\StatementResponse.java
+C:\wamp64\www\spring\core-spring-mvc\src\main\java\com\example\core\rabbit\RabbitStatementPublisher.java
+C:\wamp64\www\spring\core-spring-mvc\src\main\java\com\example\core\repository\MongoStatementRepository.java
+C:\wamp64\www\spring\core-spring-mvc\src\main\java\com\example\core\security\BasicAuthFilter.java
+C:\wamp64\www\spring\core-spring-mvc\src\main\java\com\example\core\service\StatementService.java
